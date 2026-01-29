@@ -1,104 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
-          rel="stylesheet">
-    <!-- <link rel="https://vickkykruzprogramming.dev/static//vendor/bootstrap/css/bootstrap.min.css" href="style.css"> -->
-    <!-- <link rel="https://vickkykruzprogramming.dev/static/vendor/bootstrap-icons/bootstrap-icons.css" href="style.css"> -->
-    <link rel="https://vickkykruzprogramming.dev/static/vendor/aos/aos.css" href="style.css">
-    <link rel="https://vickkykruzprogramming.dev/static/vendor/glightbox/css/glightbox.min.css" href="style.css">
-    <link rel="https://vickkykruzprogramming.dev/static/vendor/swiper/swiper-bundle.min.css" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap"
+    rel="stylesheet">
+  <link rel="{{ url_for('views.static', filename='vendor/aos/aos.css') }}" href="style.css">
+  <link rel="{{ url_for('views.static', filename='vendor/glightbox/css/glightbox.min.css') }}" href="style.css">
+  <link rel="{{ url_for('views.static', filename='vendor/swiper/swiper-bundle.min.css') }}" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- JavaScript Libraries -->
-    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- <script src="https://vickkykruzprogramming.dev/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <script src="https://vickkykruzprogramming.dev/static/vendor/aos/aos.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/typed.js/typed.umd.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="https://vickkykruzprogramming.dev/static/vendor/swiper/swiper-bundle.min.js"></script>
-    
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="{{ url_for('views.static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/typed.js/typed.umd.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('views.static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
 
-    <!-- CSS & JS -->
-    <link rel="stylesheet" href="./style.css"/>
-    <script src="./index.js" defer></script>
-    
 
-    <!-- Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="100% FREE Professional Portfolio Templates - Plain Template"/>
-    <meta name="keywords" content="OSSPH, Free portfolio"/>
-    <title> Hax | a Freefolio template by OSSPH</title>
+  <!-- CSS & JS -->
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./index.js" defer></script>
 
-    <!-- Icons -->
-    <link rel="icon" href="./favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
+
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="vickkykruz netsec, vickkykruz, full stack developer, software engineer, computer networking, cyber security, network security, database administration, server infrastructure, web application development, it support, london uk developer" />
+  <title> Victor Chukwuemeka's Portfolio</title>
+  <meta
+    content="The website is a personal portfolio for VickkyKruz NetSec. It introduces me and my brand, showcases selected projects in full‑stack development, database and server management, and computer networking/cyber‑security, and explains the technologies and approaches used. It also includes a brief overview of services I can offer (such as web application development, infrastructure optimisation, and secure system design), a section summarising my skills and certifications, and a contact page so people can reach out for collaboration, internships or work opportunities"
+    name="description">
+  <meta name="author" content="Victor Chukwuemeka" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://vickkykruzprogramming.dev/" />
+  <meta name="msvalidate.01" content="A0CEE2B3115790D47AA072B067179151" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vickkykruzprogramming.dev/" />
+  <meta property="og:title" content="VickkyKruz NetSec | Software, Networking & Cyber Security" />
+  <meta property="og:description"
+    content="Personal portfolio of VickkyKruz NetSec, showcasing full‑stack development, server and database engineering, and secure networking projects." />
+  <meta property="og:image" content="https://vickkykruzprogramming.dev/static/images/account_img.jpeg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vickkykruzprogramming.dev/" />
+  <meta name="twitter:title" content="VickkyKruz NetSec | Software, Networking & Cyber Security" />
+  <meta name="twitter:description"
+    content="Personal portfolio of VickkyKruz NetSec, showcasing full‑stack development, server and database engineering, and secure networking projects." />
+  <meta name="twitter:image" content="https://vickkykruzprogramming.dev/static/images/account_img.jpeg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="{{ url_for('views.static', filename='images/favicon.png') }}">
+  <link href="{{ url_for('views.static', filename='images/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-touch-icon-57x57.png">
 </head>
+
 <body>
-<main>
+  <main>
     <!-- Hero Header -->
     <header id="heroHeader" class="hero-header">
-        <nav id="navBar" class="nav">
-            <div class="container">
-                <button type="button" id="hamburgerBtn" class="nav__hamburger-btn">
-                    <span class="nav__hamburger-top"></span>
-                    <span class="nav__hamburger-center"></span>
-                    <span class="nav__hamburger-bottom"></span>
-                </button>
-                <ul id="navList" class="nav__list">
-                    <li class="nav__list-item">
-                        <a class="nav__list-link active" href="#heroHeader">&lt;Home &sol;&gt;</a>
-                    </li>
-                    <li class="nav__list-item">
-                      <a class="nav__list-link" href="#about">&lt;About &sol;&gt;</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a class="nav__list-link" href="#services">&lt;Services &sol;&gt;</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a class="nav__list-link" href="#works">&lt;Works &sol;&gt;</a>
-                    </li>
-                    <li class="nav__list-item">
-                        <a class="nav__list-link" href="#contact">&lt;Contact &sol;&gt;</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <section class="header__container container">
-            <div class="header__left">
-                <span class="header__sup-text">Hello There! I am a</span>
-                <h1 class="header__title">
-                    <span class="header__title-1" data-role="SOFTWARE">Software</span>
-                    <span class="header__title-2" data-role="ENGINEER">Engineer</span>
-                </h1>
-                <p class="header__msg">Focused on building secure, reliable web applications, combining modern front‑end
-                  development with a strong foundation in networking and cybersecurity.</p>
-                <a href="#" class="header__resume">Download Resume</a>
-            </div>
-            <div class="header__right">
-                <img src="./assets/illustrations/header.svg" alt="Header section illustration"/>
-            </div>
-        </section>
-        <span class="header__bg"></span>
+      <nav id="navBar" class="nav">
+        <div class="container">
+          <button type="button" id="hamburgerBtn" class="nav__hamburger-btn">
+            <span class="nav__hamburger-top"></span>
+            <span class="nav__hamburger-center"></span>
+            <span class="nav__hamburger-bottom"></span>
+          </button>
+          <ul id="navList" class="nav__list">
+            <li class="nav__list-item">
+              <a class="nav__list-link active" href="#heroHeader">&lt;Home &sol;&gt;</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#about">&lt;About &sol;&gt;</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#services">&lt;Services &sol;&gt;</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#works">&lt;Works &sol;&gt;</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__list-link" href="#contact">&lt;Contact &sol;&gt;</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="header__container container">
+        <div class="header__left">
+          <span class="header__sup-text">Hello There! I am a</span>
+          <h1 class="header__title">
+            <span class="header__title-1" data-role="SOFTWARE">Software</span>
+            <span class="header__title-2" data-role="ENGINEER">Engineer</span>
+          </h1>
+          <p class="header__msg">Focused on building secure, reliable web applications, combining modern front‑end
+            development with a strong foundation in networking and cybersecurity.</p>
+          <a href="#" class="header__resume">Download Resume</a>
+        </div>
+        <div class="header__right">
+          <img src="./assets/illustrations/header.svg" alt="Header section illustration" />
+        </div>
+      </section>
+      <span class="header__bg"></span>
     </header>
 
     <!-- About -->
@@ -108,15 +138,20 @@
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
             <div class="circular--portrait">
-              <img src="https://vickkykruzprogramming.dev/static/images/my-profile-img.jfif" class="img-fluid" alt="Profile photo of Victor Chukwuemeka">
+              <img src="https://vickkykruzprogramming.dev/static/images/my-profile-img.jfif" class="img-fluid"
+                alt="Profile photo of Victor Chukwuemeka">
             </div>
           </div>
           <div class="col-lg-8 content">
             <p class="fst-italic py-3">
-          My background covers full‑stack development, databases and server administration, and I'm slowly turning my focus to computer networking and cyber security. Basically, I've been helping to figure out and run learning platforms, internal systems and online services where they care about uptime, data integrity and security not only as a concept but as something that happens every day, when real users are using them.
-          <br><br>
-          Regardless of whether I'm fixing a backend issue at 2 a.m., strengthening a server, or changing the structure of an API, I always put simplicity, reliability, and ease of maintenance of the system first.
-        </p>
+              I’m Victor Chukwuemeka, a software engineer with a background in full‑stack development, databases and
+              server administration, and I’m increasingly focusing on computer networking and cybersecurity.
+              I’ve been helping design and run learning platforms, internal systems and online services where uptime,
+              data integrity and security matter every day to real users.
+              <br><br>
+              Whether I’m debugging a backend issue at 2 a.m., hardening a server, or reshaping an API, I prioritise
+              simplicity, reliability and ease of maintenance in everything I build.
+            </p>
           </div>
         </div>
       </div>
@@ -124,288 +159,306 @@
     <!-- About -->
 
     <!-- Stats Section -->
-<section id="stats" class="stats section">
+    <section id="stats" class="stats section">
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <div class="row gy-4">
+        <div class="row gy-4">
 
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item text-center">
-          <h3 class="">
-            <div class="">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter">8</span>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <h3 class="">
+                <div class="">
+                  <i class="bi bi-emoji-smile"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                    class="purecounter">8</span>
+                </div>
+                <strong class="service-card__title">Clients & Teams</strong>
+              </h3>
+              <p> <span>Organisations and groups I’ve supported so far</span></p>
             </div>
-            <strong class="service-card__title">Clients & Teams</strong>
-          </h3>
-          <p> <span>Organisations and groups I’ve supported so far</span></p>
-        </div>
-      </div><!-- End Stats Item -->
+          </div><!-- End Stats Item -->
 
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item text-center">
-          <h3>
-            <div class="">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter">20</span>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <h3>
+                <div class="">
+                  <i class="bi bi-journal-richtext"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                    class="purecounter">20</span>
+                </div>
+                <strong class="service-card__title">Projects Shipped</strong>
+              </h3>
+              <p> <span>From internal tools to live web apps</span></p>
             </div>
-            <strong class="service-card__title">Projects Shipped</strong>
-          </h3>
-          <p> <span>From internal tools to live web apps</span></p>
-        </div>
-      </div><!-- End Stats Item -->
+          </div><!-- End Stats Item -->
 
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item text-center">
-          <h3>
-            <div class="">
-              <i class="bi bi-headset text-lg"></i>
-              <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter">300</span>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <h3>
+                <div class="">
+                  <i class="bi bi-headset text-lg"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1"
+                    class="purecounter">300</span>
+                </div>
+                <strong class="service-card__title">Support Sessions</strong>
+              </h3>
+              <p> <span>Hands‑on help for students and staff</span></p>
             </div>
-            <strong class="service-card__title">Support Sessions</strong>
-          </h3>
-          <p> <span>Hands‑on help for students and staff</span></p>
-        </div>
-      </div><!-- End Stats Item -->
+          </div><!-- End Stats Item -->
 
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item text-center">
-          <h3>
-            <div class="">
-              <i class="bi bi-shield-lock"></i>
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter">10</span>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center">
+              <h3>
+                <div class="">
+                  <i class="bi bi-shield-lock"></i>
+                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                    class="purecounter">10</span>
+                </div>
+                <strong class="service-card__title">Secure Deployments</strong>
+              </h3>
+              <p> <span>Systems configured with uptime and security in mind</span></p>
             </div>
-            <strong class="service-card__title">Secure Deployments</strong>
-          </h3>
-          <p> <span>Systems configured with uptime and security in mind</span></p>
+          </div><!-- End Stats Item -->
+
         </div>
-      </div><!-- End Stats Item -->
 
-    </div>
+      </div>
 
-  </div>
-
-</section><!-- /Stats Section -->
+    </section><!-- /Stats Section -->
 
     <!-- Services -->
     <section id="services" class="section container">
-        <h2 class="section__title">Services</h2>
+      <h2 class="section__title">Services</h2>
 
-        <div class="service-cards">
-            <article class="service-card__box">
-                <span class="service-card__illustration">
-                    <img src="./assets/services/support.svg" alt="Support Illustration"/>
-                </span>
-                <h3 class="service-card__title">Backend &amp; Full‑Stack</h3>
-                <p class="service-card__msg">
-                  <ul class="list-unstyled mt-3">
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Core stack:</strong>
-                      <small>Python (Flask, Django), Node.js &amp; Express.js, PHP</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Web apps:</strong>
-                      <small>React, Angular, Bootstrap, responsive UI integration</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Languages:</strong>
-                      <small>Python, JavaScript/TypeScript, PHP, C, Java, Dart, Rust (beginner)</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>APIs:</strong>
-                      <small>REST API design, authentication, error handling</small>
-                    </li>
-                  </ul>
-                </p>
-                <span class="service-card__bg"></span>
-            </article>
-            <article class="service-card__box">
-                <span class="service-card__illustration">
-                    <img src="./assets/services/design.svg" alt="Design Illustration"/>
-                </span>
-                <h3 class="service-card__title">Infrastructure &amp; NetSec</h3>
-                <p class="service-card__msg">
-                  <ul class="list-unstyled mt-3">
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Databases:</strong>
-                      <small>MySQL, Firestore, SQLAlchemy, backups, performance tuning</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Servers &amp; deployment:</strong>
-                      <small>Nginx, Apache, Gunicorn, Docker, AWS, Azure (basic), Linux</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Security &amp; access:</strong>
-                      <small>User permissions, secure configurations, basic hardening</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Networking &amp; automation:</strong>
-                      <small>Network troubleshooting, monitoring scripts, Dockerised setups, PLC‑style logic flows</small>
-                    </li>
-                  </ul>
-                </p>
-                <span class="service-card__bg"></span>
-            </article>
-            <article class="service-card__box">
-                <span class="service-card__illustration">
-                    <img src="./assets/services/developing.svg" alt="Deploy Illustration"/>
-                </span>
-                <h3 class="service-card__title">Working Style</h3>
-                <p class="service-card__msg">
-                  <ul class="list-unstyled mt-3">
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Problem‑solving:</strong>
-                      <small>Enjoys debugging across code, databases and servers to get systems stable</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Communication:</strong>
-                      <small>Explains technical trade‑offs clearly to non‑technical users and teams</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Collaboration:</strong>
-                      <small>Experience supporting students, staff and cross‑functional teams; calm under pressure</small>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
-                      <strong>Ownership:</strong>
-                      <small>Treats systems as long‑term products, focusing on reliability and security, not quick hacks</small>
-                    </li>
-                  </ul>
-                </p>
-                <span class="service-card__bg"></span>
-            </article>
-        </div>
+      <div class="service-cards">
+        <article class="service-card__box">
+          <span class="service-card__illustration">
+            <img src="./assets/services/support.svg" alt="Support Illustration" />
+          </span>
+          <h3 class="service-card__title">Backend &amp; Full‑Stack</h3>
+          <p class="service-card__msg">
+          <ul class="list-unstyled mt-3">
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Core stack:</strong>
+              <small>Python (Flask, Django), Node.js &amp; Express.js, PHP</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Web apps:</strong>
+              <small>React, Angular, Bootstrap, responsive UI integration</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Languages:</strong>
+              <small>Python, JavaScript/TypeScript, PHP, C, Java, Dart, Rust (beginner)</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>APIs:</strong>
+              <small>REST API design, authentication, error handling</small>
+            </li>
+          </ul>
+          </p>
+          <span class="service-card__bg"></span>
+        </article>
+        <article class="service-card__box">
+          <span class="service-card__illustration">
+            <img src="./assets/services/design.svg" alt="Design Illustration" />
+          </span>
+          <h3 class="service-card__title">Infrastructure &amp; NetSec</h3>
+          <p class="service-card__msg">
+          <ul class="list-unstyled mt-3">
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Databases:</strong>
+              <small>MySQL, Firestore, SQLAlchemy, backups, performance tuning</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Servers &amp; deployment:</strong>
+              <small>Nginx, Apache, Gunicorn, Docker, AWS, Azure (basic), Linux</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Security &amp; access:</strong>
+              <small>User permissions, secure configurations, basic hardening</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Networking &amp; automation:</strong>
+              <small>Network troubleshooting, monitoring scripts, Dockerised setups, PLC‑style logic flows</small>
+            </li>
+          </ul>
+          </p>
+          <span class="service-card__bg"></span>
+        </article>
+        <article class="service-card__box">
+          <span class="service-card__illustration">
+            <img src="./assets/services/developing.svg" alt="Deploy Illustration" />
+          </span>
+          <h3 class="service-card__title">Working Style</h3>
+          <p class="service-card__msg">
+          <ul class="list-unstyled mt-3">
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Problem‑solving:</strong>
+              <small>Enjoys debugging across code, databases and servers to get systems stable</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Communication:</strong>
+              <small>Explains technical trade‑offs clearly to non‑technical users and teams</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Collaboration:</strong>
+              <small>Experience supporting students, staff and cross‑functional teams; calm under pressure</small>
+            </li>
+            <li>
+              <i class="bi bi-arrow-right text-white me-2 fw-bold" style="font-size:14px;"></i>
+              <strong>Ownership:</strong>
+              <small>Treats systems as long‑term products, focusing on reliability and security, not quick hacks</small>
+            </li>
+          </ul>
+          </p>
+          <span class="service-card__bg"></span>
+        </article>
+      </div>
     </section>
 
     <!-- Sample Works -->
     <section id="works" class="section container">
-        <h2 class="section__title">My Works</h2>
-        <div class="works">
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">NASS-SACOETEC ASSOCIATION</h3>
-                    <P>Built a modern web portal for the Nigerian Association of Science Students, Sikiru Adetona College of Education, Science...</P>
-                    <span class="work__badges">
-                    <span class="work__badge">Astro</span>
-                    <span class="work__badge">SCSS</span>
-                    <span class="work__badge">TypeScript</span>
-                </span>
-                </div>
-            </article>
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">PAYLAAR</h3>
-                    <p>Developed a VTU mobile application that allows users to purchase airtime, data bundles, and other digital services directly...</p>
-                    <span class="work__badges">
-                    <span class="work__badge">C</span>
-                    <span class="work__badge">C++</span>
-                    <span class="work__badge">Dart</span>
-                </span>
-                </div>
-            </article>
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">BINARY TREE</h3>
-                    <p>Implemented C scripts for binary tree creation, traversal, and property checking as part of a low-level data structures...</p>
-                    <span class="work__badges">
-                    <span class="work__badge">C</span>
-                </span>
-                </div>
-            </article>
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">SACOETEC-CSC-DEPT</h3>
-                    <p>Designed and implemented a project allocation system that automatically assigns students to supervisors based on preferences...</p>
-                    <span class="work__badges">
-                    <span class="work__badge">PHP</span>
-                    <span class="work__badge">SCSS</span>
-                    <span class="work__badge">JavaScript</span>
-                </span>
-                </div>
-            </article>
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">JOAM COLLECTIONS</h3>
-                    <p>Implemented an e‑commerce web application where users can browse products, manage carts, and place orders through a secure...</p>
-                    <span class="work__badges">
-                    <span class="work__badge">Python</span>
-                    <span class="work__badge">SCSS</span>
-                    <span class="work__badge">JavaScript</span>
-                </span>
-                </div>
-            </article>
-            <article class="work">
-                <div class="work__box">
-                    <span class="work__img-box">
-                    <img src="./assets/works/sample.png" alt="My Work 1"/>
-                </span>
-                    <h3 class="work__title">SIMPLE SHELL</h3>
-                    <p>Collaborated with an ALX peer to develop a simple Unix-like shell in C that parses user commands, spawns child processes, and handles...</p>
-                    <span class="work__badges">
-                    <span class="work__badge">C</span>
-                </span>
-                </div>
-            </article>
-        </div>
+      <h2 class="section__title">My Works</h2>
+      <div class="works">
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">NASS-SACOETEC ASSOCIATION</h3>
+            <P>Built a modern web portal for the Nigerian Association of Science Students, Sikiru Adetona College of
+              Education, Science...</P>
+            <span class="work__badges">
+              <span class="work__badge">Astro</span>
+              <span class="work__badge">SCSS</span>
+              <span class="work__badge">TypeScript</span>
+            </span>
+          </div>
+        </article>
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">PAYLAAR</h3>
+            <p>Developed a VTU mobile application that allows users to purchase airtime, data bundles, and other digital
+              services directly...</p>
+            <span class="work__badges">
+              <span class="work__badge">C</span>
+              <span class="work__badge">C++</span>
+              <span class="work__badge">Dart</span>
+            </span>
+          </div>
+        </article>
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">BINARY TREE</h3>
+            <p>Implemented C scripts for binary tree creation, traversal, and property checking as part of a low-level
+              data structures...</p>
+            <span class="work__badges">
+              <span class="work__badge">C</span>
+            </span>
+          </div>
+        </article>
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">SACOETEC-CSC-DEPT</h3>
+            <p>Designed and implemented a project allocation system that automatically assigns students to supervisors
+              based on preferences...</p>
+            <span class="work__badges">
+              <span class="work__badge">PHP</span>
+              <span class="work__badge">SCSS</span>
+              <span class="work__badge">JavaScript</span>
+            </span>
+          </div>
+        </article>
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">JOAM COLLECTIONS</h3>
+            <p>Implemented an e‑commerce web application where users can browse products, manage carts, and place orders
+              through a secure...</p>
+            <span class="work__badges">
+              <span class="work__badge">Python</span>
+              <span class="work__badge">SCSS</span>
+              <span class="work__badge">JavaScript</span>
+            </span>
+          </div>
+        </article>
+        <article class="work">
+          <div class="work__box">
+            <span class="work__img-box">
+              <img src="./assets/works/sample.png" alt="My Work 1" />
+            </span>
+            <h3 class="work__title">SIMPLE SHELL</h3>
+            <p>Collaborated with an ALX peer to develop a simple Unix-like shell in C that parses user commands, spawns
+              child processes, and handles...</p>
+            <span class="work__badges">
+              <span class="work__badge">C</span>
+            </span>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section container">
-        <h2 class="section__title">Let's Connect!</h2>
-        <div class="contact">
-            <form class="contact__form">
-                <div class="contact__field-wrapper">
-                    <label for="contactNameTxt">Name:</label>
-                    <input id="contactNameTxt" type="text" placeholder="What's your name?"/>
-                </div>
-                <div class="contact__field-wrapper">
-                  <label for="contactNameTxt">Email:</label>
-                  <input id="contactNameTxt" type="text" placeholder="What's your email address?"/>
-              </div>
-                <div class="contact__field-wrapper">
-                    <label for="contactDescriptionTxt">Message:</label>
-                    <textarea id="contactDescriptionTxt" placeholder="Lets connect!"></textarea>
-                </div>
+      <h2 class="section__title">Let's Connect!</h2>
+      <div class="contact">
+        <form class="contact__form">
+          <div class="contact__field-wrapper">
+            <label for="contactNameTxt">Name:</label>
+            <input id="contactNameTxt" type="text" placeholder="What's your name?" />
+          </div>
+          <div class="contact__field-wrapper">
+            <label for="contactNameTxt">Email:</label>
+            <input id="contactNameTxt" type="text" placeholder="What's your email address?" />
+          </div>
+          <div class="contact__field-wrapper">
+            <label for="contactDescriptionTxt">Message:</label>
+            <textarea id="contactDescriptionTxt" placeholder="Lets connect!"></textarea>
+          </div>
 
-                <button type="submit" class="contact__submit-btn">Submit</button>
-            </form>
-            <span class="contact__illustration">
-                <img src="./assets/illustrations/connect.svg" alt="Group of people connecting with each other"/>
-            </span>
-        </div>
+          <button type="submit" class="contact__submit-btn">Submit</button>
+        </form>
+        <span class="contact__illustration">
+          <img src="./assets/illustrations/connect.svg" alt="Group of people connecting with each other" />
+        </span>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        Template made with ❤️ by <a href="https://github.com/Finestwork" target="_blank" class="footer__link">Kapitan Heneral</a>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">VickkyKruz NetSec</strong> <span>All Rights Reserved</span></p>
+      <div class="social-links text-center">
+        <a href="https://x.com/KruzVickky" class="twitter text-white"><i class="bi bi-twitter-x fs-2"></i></a>
+        <a href="https://www.facebook.com/victor.onwuegbuchulem.7/" class="facebook text-white"><i class="bi bi-facebook fs-2"></i></a>
+        <a href="https://www.instagram.com/onwuegbuchulem_victor/" class="instagram text-white"><i class="bi bi-instagram fs-2"></i></a>
+        <a href="https://github.com/vickkykruz" class="google-plus text-white"><i class="bi bi-github fs-2"></i></a>
+        <a href="https://www.linkedin.com/in/edward-victor-53097324a" class="linkedin text-white"><i class="bi bi-linkedin fs-2"></i></a>
+      </div>
     </footer>
-</main>
+  </main>
 </body>
+
 </html>
